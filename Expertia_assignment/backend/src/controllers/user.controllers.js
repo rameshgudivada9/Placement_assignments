@@ -13,7 +13,7 @@ router.get("/:id", async(req,res)=>{
   
 });
 
-router.post("/", async(req,res)=>{
+router.post("/users", async(req,res)=>{
     try{
 const users= await User.create(req.body)
 return res.status(201).send(users);
