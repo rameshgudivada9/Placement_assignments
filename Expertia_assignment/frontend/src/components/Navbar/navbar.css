@@ -1,0 +1,11 @@
+.navbar{
+    margin-top: 50px;
+    display:flex;
+    background-color: black;
+    color:white;
+    justify-content: center;
+}
+.navbar > h2{
+    margin-left: 10px;
+}
+

@@ -3,17 +3,19 @@ import { useState } from "react"
 import axios from "axios";
 import "./Jobdetail.css";
 import { Link}from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import {  getProductData } from "../redux/JobReducer/JobAction";
 
 
 
 export const Jobdetails=()=>{
-    const [jobdata,setJobdata]=useState([]);
+    const dispatch = useDispatch();
     useEffect(()=>{
-        axios("http://localhost:6276/").then((res)=>{
-            setJobdata(res.data)
-            console.log(res.data)
-        })
+        dispatch(getProductData());
+
     },[])
+    const jobdata = useSelector((store) => store.product.productData);
+
 
     return(
         <div>{jobdata.map((el)=>{
