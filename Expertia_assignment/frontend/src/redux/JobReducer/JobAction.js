@@ -8,7 +8,7 @@ export const addData = (val) => {
 
 export const getProductData = (val) => async (dispatch) => {
   axios
-    .get(" http://localhost:6276/?page=1&perPage=5")
+    .get(" http://localhost:6276/?page=1&perPage=6")
     .then((res) => dispatch(addData(res.data)))
     .catch((error) => console.log(error));
 };
@@ -17,8 +17,8 @@ export const getProductDataFilterSort = (val) => async (dispatch) => {
   axios
     .get(
       ` http://localhost:6276/?${
-        val.Location ? `category=${val.Location}` : ""
-      }&${val.jobTitle ? `brandName=${val.jobTitle}` : ""}&${
+        val.Location ? `Location=${val.Location}` : ""
+      }&${val.jobTitle ? `jobTitle=${val.jobTitle}` : ""}&${
         val.sort ? `sort=${val.sort}` : ""
       }&${val.page ? `page=${val.page}` : ""}&${
         val.perPage ? `perPage=${val.perPage}` : ""

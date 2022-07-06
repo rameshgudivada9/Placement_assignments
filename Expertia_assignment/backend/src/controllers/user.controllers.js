@@ -32,7 +32,7 @@ router.get("/", async(req,res)=>{
     
         // console.log(filter["$and"]);
         let page = req.query.page || 1;
-        let perPage = req.query.perPage || 5;
+        let perPage = req.query.perPage || 6;
         let skip = (page - 1) * perPage;
         let sortData = req.query.sort
           ? {
