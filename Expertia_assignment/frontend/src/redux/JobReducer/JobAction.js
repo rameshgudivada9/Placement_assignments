@@ -8,7 +8,7 @@ export const addData = (val) => {
 
 export const getProductData = (val) => async (dispatch) => {
   axios
-    .get(" http://localhost:6276/?page=1&perPage=6")
+    .get("https://expertia-api.herokuapp.com/?page=1&perPage=6")
     .then((res) => dispatch(addData(res.data)))
     .catch((error) => console.log(error));
 };
@@ -16,7 +16,7 @@ export const getProductDataFilterSort = (val) => async (dispatch) => {
   console.log(val);
   axios
     .get(
-      ` http://localhost:6276/?${
+      ` https://expertia-api.herokuapp.com/?${
         val.Location ? `Location=${val.Location}` : ""
       }&${val.jobTitle ? `jobTitle=${val.jobTitle}` : ""}&${
         val.sort ? `sort=${val.sort}` : ""
