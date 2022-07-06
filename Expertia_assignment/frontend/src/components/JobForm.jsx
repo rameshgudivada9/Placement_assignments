@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
 import "./Jobform.css"
 export const JobForm=()=>{
     return (
         <div class="col-md-6 offset-md-3 mt-5">
+            <button className="btn"><Link  to="/">HOME</Link></button>
     <br/>
     <h1>Application Form</h1>
     <form accept-charset="UTF-8" action="https://getform.io/f/{your-form-endpoint-goes-here}" method="POST" enctype="multipart/form-data" target="_blank">
