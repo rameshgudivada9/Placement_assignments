@@ -8,7 +8,7 @@
 }
 .usercard{
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex-direction: row;
     flex: 2;
     background-color: white;
@@ -18,7 +18,7 @@
 }
 .usercard-sub-2{
     flex: 2;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 .usercard-sub-2 h5{
@@ -28,14 +28,14 @@
 
 .sub{
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 5px 0px;
     background-color: white;
 
 }
 .content{
     flex:2;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 .imagesize{
@@ -50,6 +50,9 @@
 .head5{
     padding-left: 0px;
     margin-left: 0px;
+}
+.redio{
+    background-color: black;
 }
 
 

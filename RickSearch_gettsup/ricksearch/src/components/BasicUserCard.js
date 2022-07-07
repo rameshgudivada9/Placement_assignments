@@ -2,6 +2,7 @@ import axios from "axios";
 import { Fragment, useEffect, useState } from "react";
 import "./BasicUserCard.css";
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Modal from "./Modal"
 export const BasicUserCard = () => {
 
     const totalCount=107;
@@ -38,10 +39,25 @@ export const BasicUserCard = () => {
 
   }
 
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if(modal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+
+
+
+
   return (
     <Fragment>
       <div className="container">
-        <div className="row">
+        <div className="row" >
           <InfiniteScroll
             dataLength={contact.length}
             next={fetchMoreData}
@@ -53,13 +69,14 @@ export const BasicUserCard = () => {
               contact.map((ele) => {
                 return (
                   <Fragment>
-                    <div className="sub">
+                    <div className="sub" key={ele.id}>
                       <div className="usercard">
                         <div className="usercard-sub-1">
                           <img
                             src={ele.image}
                             alt="imagess"
                             className="imagesize"
+                            onClick={toggleModal}
                           />
                         </div>
                         <div className="usercard-sub-2">
@@ -81,6 +98,21 @@ export const BasicUserCard = () => {
          
         </div>
       </div>
+
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <h2>Hello Modal</h2>
+            <p>
+            </p>
+            <button className="close-modal" onClick={toggleModal}>
+              CLOSE
+            </button>
+          </div>
+        </div>
+      )}
+
     </Fragment>
   );
 };
