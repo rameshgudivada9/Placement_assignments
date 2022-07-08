@@ -67,6 +67,7 @@
   background-color: white;
   padding-top: 3%;
   border-bottom: 1px black;
+  padding-left: 3%;
 }
 .searchinputdiv {
   flex: 2;
