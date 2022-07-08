@@ -9,12 +9,13 @@ import { useState } from 'react';
  const SearchAppBar=({props})=>{
 console.log(props)
 const [searchTerm,setSearchTerm]=useState('');
-
+console.log(searchTerm);
   return (
     <div className="Searchdiv-main">
       <div className="searchIcon"><SearchRoundedIcon/></div>
      <div className="searchinputdiv">
        <Input className="searchInput" placeholder="Search for a contact" onChange={event=>{setSearchTerm(event.target.value)}}/>
+       
      </div>
      
     </div>

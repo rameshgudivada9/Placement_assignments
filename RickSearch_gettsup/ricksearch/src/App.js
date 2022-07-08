@@ -1,10 +1,10 @@
 import './App.css';
-import { BasicUserCard } from './components/BasicUserCard';
+import { BasicUserCard } from './components/BasicUserCard/BasicUserCard';
 
 function App() {
   return (
     <div className="App">
-      <BasicUserCard></BasicUserCard>
+      <BasicUserCard/>
     </div>
   );
 }
