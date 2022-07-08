@@ -138,9 +138,10 @@ body.active-modal {
 .marker {
   width: 6px;
   height: 6px;
-  /* background-color: greenyellow; */
+  background-color:#00dd74;
   margin-top: 30px;
   margin-right: 5px;
+  border-radius: 50%;
 }
 
 .imagecheck {
