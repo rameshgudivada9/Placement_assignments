@@ -1,0 +1,11 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px auto;
+}
+.radio-btn{
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+}

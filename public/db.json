@@ -1,0 +1,28 @@
+{
+  "todo": [
+    {
+      "title": "bullet song",
+      "priority": "low",
+      "status": true,
+      "id": 6
+    },
+    {
+      "title": "eat food",
+      "priority": "high",
+      "status": true,
+      "id": 16
+    },
+    {
+      "title": "learn redux",
+      "priority": "medium",
+      "status": false,
+      "id": 17
+    },
+    {
+      "title": "vadi",
+      "priority": "high",
+      "status": false,
+      "id": 18
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+.todo-sort-filter{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 20px auto;
+}
