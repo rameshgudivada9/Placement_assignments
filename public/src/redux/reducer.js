@@ -17,7 +17,7 @@ export const todoReducer = (store = init, { type, payload }) => {
       return {
         ...store,
         todo: [...store.todo].sort((a, b) =>
-          payload[1] == "asc"
+          payload[1] === "asc"
             ? a[payload[0]] > b[payload[0]]
               ? 1
               : a[payload[0]] < b[payload[0]]
